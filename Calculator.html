@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Calculator </title>
+<script>
+function Calculator () {
+var num1=parseFloat(document.getElementById('num1').value);
+var num2=parseFloat(document.getElementById('num2').value);
+if (document.getElementById("op1").checked){
+alert(num1+num2);
+}
+if (document.getElementById("op2").checked){
+alert(num1-num2);
+}
+if (document.getElementById("op3").checked){
+alert(num1*num2);
+}
+else if (document.getElementById("op4").checked){
+alert(num1/num2);
+}
+}
+</script>
+<style>
+body{
+border:3px solid;
+width:30%; 
+ margin-left:35%; 
+ margin-top:12%; 
+ padding:8px;
+ border-radius: 15px;
+}
+h1{
+margin-left: 65px;
+font-family: Times new roman;
+font-size: 35px;
+color:blue;
+}
+button{
+background-color: black;
+ margin-left: 105px; 
+}
+</style>
+</head>
+<body>
+<b><h1>Calculator</h1></b>
+Number1:
+<input type="text" id="num1"><br>
+<br>
+Number2:
+<input type="text" id="num2"><br>
+<br>
+<form>
+<input type="radio" id="op1" value="+" name="operator">Sum<br>
+<input type="radio" id="op2" value="-" name="operator">Difference <br>
+<input type="radio" id="op3" value="*" name="operator">Product<br>
+<input type="radio" id="op4" value="/" name="operator">Quotient<br>
+<input type="radio" onclick="document.getElementById('num1').value = 
+'',document.getElementById('num2').value = ''"/>Clear <br>
+<!-- <input type="radio" onclick="document.getElementById('value1').value = 
+'',document.getElementById('value2').value = ''"/>-->
+</form>
+<br>
+<button> <input type="button" value="Calculate" onclick="Calculator()"> </button>
+</body>
+</html>
